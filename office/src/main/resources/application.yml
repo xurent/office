@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/live?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 422817618
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 512MB
+      max-request-size: 512MB
+
+
+
+store:
+  tmp:
+    uploadpath: /static/tmp/
+  file:
+    uploadpath:  /static/files/
+    pdf: /static/files/pdf/
+    word: /static/files/word/
+    img: /static/files/img/
+    excel: /static/files/excel/
+
+
+url:
+ resource: http://localhost:8080/
+ whitelist: /filter/auth/refuse,/performance/open,/login,/favicon.ico,files
