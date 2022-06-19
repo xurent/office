@@ -39,7 +39,8 @@ public class UserInfoResolver implements HandlerMethodArgumentResolver {
         HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
 
         User user = new User();
-        user.setAccount(request.getHeader(CommonConstant.ACCOUNT));
+        //user.setAccount(request.getHeader(CommonConstant.ACCOUNT));
+        user.setAccount((String) request.getAttribute(CommonConstant.ACCOUNT));
         user.setRoleList(Stream.of(request.getAttribute(CommonConstant.ROLE).toString().split(CommonConstant.COMMA)).collect(Collectors.toList()));
         log.warn(">>>>>>>> 执行操作用户：{}", JSON.toJSONString(user));
         return user;

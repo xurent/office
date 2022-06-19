@@ -37,18 +37,18 @@ public class MvcConfig  implements WebMvcConfigurer {
             file=urlPath+filePath;
             System.out.println("WINDOWS:"+temp);
         }
-        File fp=new File(urlPath);
+        File fp=new File(temp);
         if(!fp.exists()){
             System.out.println(fp.mkdirs()); ;
         }
 
-        registry.addResourceHandler("/store/tmp/**").addResourceLocations("file:"+temp);
-        registry.addResourceHandler("/store/file/**").addResourceLocations("file:"+file);
+        registry.addResourceHandler("/tmp/**").addResourceLocations("file:"+temp);
+        registry.addResourceHandler("/files/**").addResourceLocations("file:"+file);
         registry.addResourceHandler("swagger-ui.html").addResourceLocations(
                 "classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
-        System.out.println("---->"+temp);
+
     }
 
 

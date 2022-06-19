@@ -8,7 +8,10 @@ public enum ServerCodeEnum {
     AUTH_FAIL(403, "无权限访问"),
     DATA_AUTH_FAIL(404, "无权限访问该数据"),
 
-    PDF_TO_WORD_FAIL(10001,"PDF转Wor失败")
+    PDF_TO_WORD_FAIL(10001,"PDF转Wor失败"),
+    ID_PHOTO_FAIL(20001,"证件照生成失败"),
+    ID_PHOTO_TYPE_FAIL(20002,"图片上传格式错误"),
+    ID_PHOTO_EXIT_FAIL(20003,"照片不存在")
     ;
 
     private Integer code;

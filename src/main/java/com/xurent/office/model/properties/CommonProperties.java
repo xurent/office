@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "url")
 @Getter
 public class CommonProperties {
 
@@ -21,4 +20,8 @@ public class CommonProperties {
      */
     @Value(value = "${url.whitelist}")
     private String whitelist;
+
+
+
+
 }

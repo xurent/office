@@ -32,4 +32,16 @@ public class CommonConstant {
      * 过滤器异常属性名
      */
     public static final String FILTER_EXCEPTION_DISPATCHER_URL = "/filter/auth/refuse";
+
+
+
+
+    public static final String FILE_JPG = "jpg";
+    public static final String FILE_JPEG = "jpeg";
+    public static final String FILE_PNG = "png";
+
+    public static final String FILE_IDCard = "-certificate.jpg";
+
+
+    public static final String TOKEN_STRING = "token";
 }

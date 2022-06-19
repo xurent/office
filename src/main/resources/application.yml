@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8085
 
 spring:
   datasource:
@@ -23,8 +23,12 @@ store:
     word: /static/files/word/
     img: /static/files/img/
     excel: /static/files/excel/
+    idcard: /static/files/id-card/
 
 
 url:
- resource: http://localhost:8080/
- whitelist: /filter/auth/refuse,/performance/open,/login,/favicon.ico,files
+ resource: http://localhost:8085/
+ whitelist: /filter/auth/refuse,/performance/open,/login,/favicon.ico,/files
+
+python:
+    env: /static/python/1.py
