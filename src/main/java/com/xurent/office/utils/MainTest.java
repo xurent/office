@@ -1,7 +1,5 @@
 package com.xurent.office.utils;
 
-import org.python.core.*;
-import org.python.util.PythonInterpreter;
 
 import java.io.*;
 import java.util.Arrays;
